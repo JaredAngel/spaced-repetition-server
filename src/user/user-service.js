@@ -1,4 +1,4 @@
-const bcrypt = require('bcryptjs')
+const bcrypt = require('bcryptjs');
 
 const REGEX_UPPER_LOWER_NUMBER_SPECIAL = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&])[\S]+/
 
@@ -46,7 +46,7 @@ const UserService = {
       const [languageId] = await trx
         .into('language')
         .insert([
-          { name: 'French', user_id },
+          { name: 'Spanish', user_id },
         ], ['id'])
 
       // when inserting words,
@@ -58,14 +58,16 @@ const UserService = {
         .first()
 
       const languageWords = [
-        ['entraine toi', 'practice', 2],
-        ['bonjour', 'hello', 3],
-        ['maison', 'house', 4],
-        ['développeur', 'developer', 5],
-        ['traduire', 'translate', 6],
-        ['incroyable', 'amazing', 7],
-        ['chien', 'dog', 8],
-        ['chat', 'cat', null],
+        ['hola', 'hello', 2],
+        ['comida', 'food', 3],
+        ['triste', 'sad', 4],
+        ['feliz', 'happy', 5],
+        ['libro', 'book', 6],
+        ['playa', 'beach', 7],
+        ['teatro', 'theater', 8],
+        ['danza', 'dance', 9],
+        ['ejercicio', 'exercise', 10],
+        ['gracias', 'thank you', null],
       ]
 
       const [languageHeadId] = await trx
@@ -91,4 +93,4 @@ const UserService = {
   },
 }
 
-module.exports = UserService
+module.exports = UserService;
