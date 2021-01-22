@@ -134,4 +134,4 @@ languageRouter
     }
   })
 
-module.exports = languageRouter;
+module.exports = languageRouter

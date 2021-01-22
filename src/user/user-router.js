@@ -56,4 +56,4 @@ userRouter
     }
   })
 
-module.exports = userRouter;
+module.exports = userRouter
